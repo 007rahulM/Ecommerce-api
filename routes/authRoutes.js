@@ -25,13 +25,13 @@ router.post('/register',async(req,res)=>{
     try{
         // 1 we get date
         //we grap the data the user sent us from the body
-        const{email,password}=req.body;
+        const{name,email,password}=req.body;
 
         //2 validation it the like a bouncer 
         //here we chec if the user didn't send an email or password stop them right here like that
-        if(!email||!password){
-           // return res.status(400).json({
-              //  error:"Please provide email and password"
+        if(!name||!email||!password){
+           return res.status(400).json({
+                error:"Please provide email and password"
 
                 //new way of error handling by using the eror middleare her here 2 way come if we using insisde the asyn then we shoudld use the throw new Error("...messaseage here") 
                 //or else there is also another simpler way just to use the next (err)=>return next(err) //it go straight to errorHandler befoer this we shoudl add error message in err like const err=new Error("Pleare provide email and password")
@@ -41,10 +41,10 @@ router.post('/register',async(req,res)=>{
             //     throw new Error("Please provide email and password");  //throw to the handler
 
                 //2 way is to use the noraml simpler way
-                res.status(400);
-                const err=new Error("Please provide email and password");
-                return next(err);
-            // });
+                // res.status(400);
+                // const err=new Error("Please provide email and password");
+                // return next(err);
+             });
 
         }
             //3 check for existing user
