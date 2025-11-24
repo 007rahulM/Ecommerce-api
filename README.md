@@ -34,6 +34,7 @@ This project goes beyond basic CRUD to implement professional backend patterns:
 
 ## 📂 Project Structure
 
+```text
 ecommerce-api/
 ├── middleware/
 │   ├── authMiddleware.js   # Checks JWT tokens & Admin privileges
@@ -49,7 +50,6 @@ ecommerce-api/
 │   └── orderRoutes.js      # Checkout & Payment logic
 ├── index.js                # Server entry point
 └── .env                    # Environment variables (Ignored by Git)
-
 ---
 
 ## 🔌 API Endpoints Reference
@@ -88,7 +88,7 @@ ecommerce-api/
 ## 🧪 How to Run Locally
 
 1.  **Clone the Repository:**
-    git clone https://github.com/YOUR_USERNAME/ecommerce-api.git
+    git clone https://github.com/007rahulM/ecommerce-api.git
     cd ecommerce-api
 
 2.  **Install Dependencies:**
