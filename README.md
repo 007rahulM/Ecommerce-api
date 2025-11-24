@@ -50,7 +50,7 @@ ecommerce-api/
 │   └── orderRoutes.js      # Checkout & Payment logic
 ├── index.js                # Server entry point
 └── .env                    # Environment variables (Ignored by Git)
----
+--- '```text
 
 ## 🔌 API Endpoints Reference
 
